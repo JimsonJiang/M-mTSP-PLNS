@@ -110,7 +110,7 @@ function [statisticsOfOPT, statisticsOfTimeConsume, adjustedHis] = MTSP_PLNS_Min
     noImproveIter = 0;
     globalMinIterIdx = iter;
     %tic;
-    %% 主循环
+    %% Main loop
     while Time <= MAXtime
 
         % Algorithm Operators
@@ -332,4 +332,5 @@ function [statisticsOfOPT, statisticsOfTimeConsume, adjustedHis] = MTSP_PLNS_Min
     adjustedHis = (distHistory - OPT') ./ (OPT' / 100);
     meanAdjustedHis = mean(adjustedHis, 1);
     adjustedHis = [adjustedHis; meanAdjustedHis];
+
 end
